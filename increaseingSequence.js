@@ -23,6 +23,7 @@ Alternately, you can remove 2 to get the strictly increasing sequence [1, 3].
 */
 
 function almostIncreasingSequence(sequence) {
+  debugger;
   var ret = false;
   var removed = false;
   for (var i = 0; i < sequence.length; i++) {
@@ -33,13 +34,12 @@ function almostIncreasingSequence(sequence) {
       if (sequence[i] > sequence[i + 1]) {
         removed = true;
         sequence.splice(i, 1);
-        ret = true;
       }
     } else if (removed) {
       if (sequence[i] > sequence[i + 1]) {
         ret = false;
       }
-    }
+    } ret = true;
   }
   return ret;
 }

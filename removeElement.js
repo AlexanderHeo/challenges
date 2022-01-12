@@ -51,10 +51,8 @@ Constraints:
 var removeElement = function (nums, val) {
   let count = 0;
   for (var i = 0; i < nums.length; i++) {
-    if (val === nums[i]) {
-      nums.splice(i, 1);
-      i--;
-      count++;
+    if (val !== nums[i]) {
+      nums[count++] = nums[i];
     }
   }
   return count;
